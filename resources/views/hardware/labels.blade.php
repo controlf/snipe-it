@@ -41,6 +41,7 @@
       img.barcode {
         display: block;
         /*height: 0.15in;*/
+	/*80% scaling and auto centering makes this easier to scan*/
         width: 80%;
 	margin-left: auto;
 	margin-rigth: auto;
@@ -56,6 +57,7 @@
         display: inline-block;
         word-wrap: break-word;
         word-break: break-word;
+	/*Break word to split long model names sensibly*/
       }
 
       div.barcode_container {
@@ -229,6 +231,7 @@
                   </div>
                 @endif
                 @if (($settings->labels_display_tag=='1') && ($asset->asset_tag!=''))
+		  /*Displays asset tag and legacy ID if available*/
                   <div class="pull-left">
                     <strong>Tag:</strong> {{ $asset->asset_tag }}
                       @if ($asset->_snipeit_legacy_id_14!='')
@@ -242,13 +245,9 @@
                   </div>
                 @endif
                 @if (($settings->labels_display_model=='1') && ($asset->model->name!=''))
-                  {{-- @if (strlen($asset->model->name) + strlen($asset->model->model_number) < 26) --}}
-                    <div class="pull-left">
-                      <strong>Model:</strong> {{ $asset->model->name }} {{ $asset->model->model_number }}
-                    </div>
-                  {{-- @else
-                      <strong>Model:</strong> {{ $asset->model->name }}
-                  @endif --}}
+                  <div class="pull-left">
+                    <strong>Model:</strong> {{ $asset->model->name }} {{ $asset->model->model_number }}
+                  </div>
                 @endif
 		@if ($asset->_snipeit_course_33!='')
                   <div class="pull-left">
