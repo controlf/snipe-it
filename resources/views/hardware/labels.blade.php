@@ -234,8 +234,8 @@
 		  {{-- Displays asset tag and legacy ID if available --}}
                   <div class="pull-left">
                     <strong>Tag:</strong> {{ $asset->asset_tag }}
-                      @if ($asset->_snipeit_legacy_id_14!='')
-                        <strong>Legacy:</strong> {{ $asset->_snipeit_legacy_id_14 }}
+                      @if ($asset->_snipeit_legacy_id_3!='')
+                        <strong>Legacy:</strong> {{ $asset->_snipeit_legacy_id_3 }}
                       @endif
                   </div>
                 @endif
@@ -249,9 +249,9 @@
                     <strong>Model:</strong> {{ $asset->model->name }} {{ $asset->model->model_number }}
                   </div>
                 @endif
-		@if ($asset->_snipeit_course_33!='')
+		@if ($asset->_snipeit_course_10!='')
                   <div class="pull-left">
-                    <strong>Course:</strong> {{ $asset->_snipeit_course_33 }}
+                    <strong>Course:</strong> {{ $asset->_snipeit_course_10 }}
                   </div>
                 @endif
               </div>
