@@ -43,8 +43,8 @@
         /*height: 0.15in;*/
 	/*80% scaling and auto centering makes this easier to scan*/
         width: 80%;
-	margin-left: auto;
-	margin-right: auto;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .qr_text {
@@ -231,7 +231,7 @@
                   </div>
                 @endif
                 @if (($settings->labels_display_tag=='1') && ($asset->asset_tag!=''))
-		  /*Displays asset tag and legacy ID if available*/
+		  {{-- Displays asset tag and legacy ID if available --}}
                   <div class="pull-left">
                     <strong>Tag:</strong> {{ $asset->asset_tag }}
                       @if ($asset->_snipeit_legacy_id_14!='')
