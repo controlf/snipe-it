@@ -44,7 +44,7 @@
 	/*80% scaling and auto centering makes this easier to scan*/
         width: 80%;
 	margin-left: auto;
-	margin-rigth: auto;
+	margin-right: auto;
       }
 
       .qr_text {
