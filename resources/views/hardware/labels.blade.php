@@ -246,7 +246,7 @@
                 @endif
                 @if (($settings->labels_display_model=='1') && ($asset->model->name!=''))
                   <div class="pull-left">
-                    <strong>Model:</strong> {{ $asset->model->name }} {{ $asset->model->model_number }}
+                    <strong>Model:</strong> {{ $asset->model->manufacturer->name }} {{ $asset->model->name }} {{ $asset->model->model_number }}
                   </div>
                 @endif
 		@if ($asset->_snipeit_course_10!='')
