@@ -14,6 +14,30 @@ __This is web-based software__. This means there is no executable file (aka no .
 
 -----
 
+### Auto Custom Fields
+
+https://github.com/snipe/snipe-it/issues/4956#issuecomment-465572692
+
+```sql
+/* 
+    This automatically sets the fieldset to the universal fieldset on model creation, if a fieldset
+    was not defined in the model definition. Allows for universal custom fields.
+*/
+
+DELIMITER ;;
+CREATE TRIGGER
+    set_default_fieldset
+BEFORE INSERT
+    ON models FOR EACH ROW IF NEW.fieldset_id is null THEN
+        SET NEW.fieldset_id = (
+            select id from custom_fieldsets where name = 'Mobile Devices'
+        );
+    END IF ;;
+DELIMITER ;
+```
+
+-----
+
 ### Installation
 
 For instructions on installing and configuring Snipe-IT on your server, check out the [installation manual](https://snipe-it.readme.io/docs). (Please see the [requirements documentation](https://snipe-it.readme.io/docs/requirements) for full requirements.)
