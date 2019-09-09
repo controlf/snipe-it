@@ -33,8 +33,8 @@
         height: {{ $qr_size }}in;*/
         /*Temporary fix for the QR code having a margin...
           Image is 99px wide/tall, but the QR code itself is only 87px tall/wide.*/
-        width: 113.79%;
-        height: 113.79%;
+        width: 111%;
+        height: 111%;
         margin-top: -6.9%;
         margin-left: -6.9%;
       }
